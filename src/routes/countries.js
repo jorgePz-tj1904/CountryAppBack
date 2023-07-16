@@ -11,7 +11,8 @@ const router = Router();
 router.get('/', async(req,res)=>{
     try {
     const list = await getApiData();
-    res.status(200).send(list);
+
+    res.status(200).send(list, "funciona?");
   } catch (error) {
     console.error(error);
     res.status(500).send('Error al cargar los datos.');
